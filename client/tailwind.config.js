@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "input-txt": "var(--input-txt)",
+        "input-bg": "var(--input-bg)",
+      },
+    },
   },
   plugins: [],
 };
