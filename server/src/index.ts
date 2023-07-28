@@ -9,7 +9,9 @@ const app = express();
 app.use(cors());
 
 app.get("/", async (req, res) => {
-  res.send("hey");
+  res.json({
+    name: "max",
+  });
 });
 
 app.get("/search-artists", async (req, res) => {
@@ -26,6 +28,10 @@ app.get("/search-artists", async (req, res) => {
   } catch (error) {
     res.send(error);
   }
+});
+
+app.post("/user-created", async (req, res) => {
+  let idk = req.body;
 });
 
 app.listen(3001, () => {
